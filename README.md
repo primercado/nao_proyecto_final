@@ -6,6 +6,77 @@ Esta API utiliza Flask y SQLAlchemy para interactuar con una base de datos Postg
 
 La API se estructura alrededor de dos recursos principales: Expedientes individuales y Listas de expedientes por fecha.
 
+## Requisitos
+
+- Docker y Docker Compose instalados en su sistema.
+
+## Pasos para ejecutar la aplicación
+
+- Clonar el repositorio:
+
+bash git clone https://github.com/primercado/nao_proyecto_final.git
+
+
+## Crear y configurar Varibles de Entorno
+
+Las variables de entorno son una parte fundamental para la configuración de la aplicación.
+
+Son necesarias para configurar la conexión a la base de datos PostgreSQL.
+
+Para configurar las variables de entorno:
+
+- Navegar al directorio de la aplicación:
+
+bash cd app/ 
+
+- En el directorio cree un archivo .env.
+
+- Abra el archivo .env y defina las siguientes variables con sus propios valores:
+
+
+POSTGRES_USER=<username>
+POSTGRES_PASSWORD=<password>
+POSTGRES_DB=<database_name>
+SQLALCHEMY_DATABASE_URI=postgresql://<username>:<password>@db:5432/<database_name>
+
+
+- Guarde y cierre el archivo .env.
+
+En su aplicación, puede acceder a estas variables de entorno usando os.environ.get. Por ejemplo:
+
+python
+
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('SQLALCHEMY_DATABASE_URI')
+
+Esto lee el valor de la variable de entorno SQLALCHEMY_DATABASE_URI y la usa como la URI de la base de datos para su aplicación Flask.
+
+## Archivo .env.prueba
+
+Para ayudarle a entender mejor, aquí tiene un ejemplo de cómo debería verse un archivo .env.prueba. Esta es una versión de prueba del archivo .env con datos ficticios. No debe usar estos valores en su configuración real.
+
+POSTGRES_USER=usuario
+POSTGRES_PASSWORD=contrasena
+POSTGRES_DB=bbdd_prueba
+SQLALCHEMY_DATABASE_URI=postgresql://usuario:contrasenad@db:5432/bbdd_prueba
+
+Tenga en cuenta que el archivo .env.prueba es solo un ejemplo. Debe crear su propio archivo .env con sus propias variables de entorno para su configuración específica.
+
+
+## Construir y levantar la aplicación con Docker Compose:
+
+- Dirígite al directorio app/ y ejecuta:
+
+docker-compose up --build
+
+Nota: La opción --build se utiliza para construir las imágenes antes de iniciar los contenedores. Solo es necesario hacerlo la primera vez que se inicia la aplicación o cuando se han realizado cambios en el código.
+
+Una vez que los contenedores están en funcionamiento, puedes acceder a la aplicación en http://localhost:5000.
+
+- Para ejecutarla luego, solo debes ubicarte en el directorio app/ y ejecutar el siguiente código y acceder a la aplicación en http://localhost:5000
+
+docker-compose up
+
+
 ## Endpoints de la API
 
 ### /expediente/<expte>
