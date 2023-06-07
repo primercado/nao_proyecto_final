@@ -17,7 +17,7 @@ La API se estructura alrededor de dos recursos principales: Expedientes individu
     ```
     bash
     
-    `git clone https://github.com/primercado/nao_proyecto_final.git`
+    git clone https://github.com/primercado/nao_proyecto_final.git
     
     ```
 
@@ -35,7 +35,7 @@ Para configurar las variables de entorno:
     ```
     bash
     
-    `cd app/`
+    cd app/
     
     ```
 
@@ -46,10 +46,10 @@ Para configurar las variables de entorno:
     
     ```
     php
-    `POSTGRES_USER= usuario
+    POSTGRES_USER= usuario
     POSTGRES_PASSWORD= password
     POSTGRES_DB= nombre_base_datos
-    SQLALCHEMY_DATABASE_URI=postgresql://usuario:password@db:5432/nombre_base_datos`
+    SQLALCHEMY_DATABASE_URI=postgresql://usuario:password@db:5432/nombre_base_datos
     
     ```
 
@@ -66,10 +66,10 @@ Para ayudarle a entender mejor, aquí tiene un ejemplo de cómo debería verse u
 
     ```
     php
-    `POSTGRES_USER= usuario
+    POSTGRES_USER= usuario
     POSTGRES_PASSWORD= contrasena
     POSTGRES_DB= bbdd_prueba
-    SQLALCHEMY_DATABASE_URI= postgresql://usuario:contrasenad@db:5432/bbdd_prueba`
+    SQLALCHEMY_DATABASE_URI= postgresql://usuario:contrasenad@db:5432/bbdd_prueba
     ```
     
 Tenga en cuenta que el archivo .env.prueba es solo un ejemplo. Debe crear su propio archivo .env con sus propias variables de entorno para su configuración específica.
