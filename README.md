@@ -14,9 +14,7 @@ La API se estructura alrededor de dos recursos principales: Expedientes individu
 
 - Clonar el repositorio:
 
-    ```
-    bash
-    
+    ```    
     git clone https://github.com/primercado/nao_proyecto_final.git
     
     ```
@@ -33,8 +31,6 @@ Para configurar las variables de entorno:
 - Navegar al directorio de la aplicación:
 
     ```
-    bash
-    
     cd app/
     
     ```
@@ -45,7 +41,6 @@ Para configurar las variables de entorno:
 
     
     ```
-    php
     POSTGRES_USER= usuario
     POSTGRES_PASSWORD= password
     POSTGRES_DB= nombre_base_datos
@@ -105,7 +100,7 @@ Este endpoint te permite obtener la información de un expediente en particular.
     - **Contenido:**
     
     ```
-    css
+    
     `[ { "Fecha": "fecha", "Orden": "orden", }, ...]`
     ```
     
@@ -125,12 +120,9 @@ Este endpoint te permite obtener una lista de todos los expedientes para una fec
     - **Código:** 200
     - **Contenido:**
     
-    ```
-    css
-    
-    ```
-    
+       
 - `[ { "Orden": "orden", "Expediente": "expediente", "Caratula": "caratula", }, ...]`
+
 - **Respuesta de error:**
     - **Código:** 404
     - **Contenido:** `{"mensaje": "No se encontraron expedientes para esta fecha"}`
