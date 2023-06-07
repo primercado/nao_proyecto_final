@@ -93,12 +93,7 @@ Este endpoint te permite obtener la información de un expediente en particular.
 - **Ejemplo:** `/expediente/999-17`
 - **Respuesta de éxito:**
     - **Código:** 200
-    - **Contenido:**
-    
-    ```
-    `[ { "Fecha": "fecha", "Orden": "orden", }, ...]`
-    ```
-    
+    - **Contenido:** `[ { "Fecha": "fecha", "Orden": "orden", }, ...]`      
 - **Respuesta de error:**
     - **Código:** 404
     - **Contenido:** `{"mensaje": "Expediente no encontrado"}`
