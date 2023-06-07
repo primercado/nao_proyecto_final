@@ -15,6 +15,7 @@ Este endpoint te permite obtener la información de un expediente en particular.
 - **URL:** /expediente/<expte>
 - **Método:** GET
 - **URL Params:** `expte` - El número del expediente, con las barras ("/") reemplazadas por guiones ("-").
+- **Ejemplo:** `/expediente/999-17`
 - **Respuesta de éxito:**
     - **Código:** 200
     - **Contenido:**
@@ -35,6 +36,7 @@ Este endpoint te permite obtener una lista de todos los expedientes para una fec
 - **URL:** /expedientes/<fecha>
 - **Método:** GET
 - **URL Params:** `fecha` - La fecha, con las barras ("/") reemplazadas por guiones ("-").
+- **Ejemplo:** `/expedientes/05-06-2023`
 - **Respuesta de éxito:**
     - **Código:** 200
     - **Contenido:**
