@@ -25,5 +25,3 @@ def expedientes_route(fecha):
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
     
-    
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://pablo:lunares241090@db:5432/despachos'
