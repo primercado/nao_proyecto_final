@@ -15,8 +15,7 @@ La API se estructura alrededor de dos recursos principales: Expedientes individu
 - Clonar el repositorio:
 
     ```    
-    git clone https://github.com/primercado/nao_proyecto_final.git
-    
+    git clone https://github.com/primercado/nao_proyecto_final.git  
     ```
 
 
@@ -31,8 +30,7 @@ Para configurar las variables de entorno:
 - Navegar al directorio de la aplicación:
 
     ```
-    cd app/
-    
+    cd app/  
     ```
 
 - En el directorio cree un archivo .env.
@@ -45,7 +43,6 @@ Para configurar las variables de entorno:
     POSTGRES_PASSWORD= password
     POSTGRES_DB= nombre_base_datos
     SQLALCHEMY_DATABASE_URI=postgresql://usuario:password@db:5432/nombre_base_datos
-    
     ```
 
 
@@ -60,7 +57,6 @@ Para ayudarle a entender mejor, aquí tiene un ejemplo de cómo debería verse u
 
 
     ```
-    php
     POSTGRES_USER= usuario
     POSTGRES_PASSWORD= contrasena
     POSTGRES_DB= bbdd_prueba
@@ -100,7 +96,6 @@ Este endpoint te permite obtener la información de un expediente en particular.
     - **Contenido:**
     
     ```
-    
     `[ { "Fecha": "fecha", "Orden": "orden", }, ...]`
     ```
     
