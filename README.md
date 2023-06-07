@@ -14,7 +14,12 @@ La API se estructura alrededor de dos recursos principales: Expedientes individu
 
 - Clonar el repositorio:
 
-git clone https://github.com/primercado/nao_proyecto_final.git
+    ```
+    bash
+    
+    `git clone https://github.com/primercado/nao_proyecto_final.git`
+    
+    ```
 
 
 ## Crear y configurar Varibles de Entorno
@@ -27,20 +32,27 @@ Para configurar las variables de entorno:
 
 - Navegar al directorio de la aplicación:
 
-cd app/ 
+    ```
+    bash
+    
+    `cd app/`
+    
+    ```
 
 - En el directorio cree un archivo .env.
 
 - Abra el archivo .env y defina las siguientes variables con sus propios valores:
 
+    
+    ```
+    php
+    `POSTGRES_USER= usuario
+    POSTGRES_PASSWORD= password
+    POSTGRES_DB= nombre_base_datos
+    SQLALCHEMY_DATABASE_URI=postgresql://usuario:password@db:5432/nombre_base_datos`
+    
+    ```
 
-POSTGRES_USER= usuario
-
-POSTGRES_PASSWORD= password
-
-POSTGRES_DB= nombre_base_datos
-
-SQLALCHEMY_DATABASE_URI=postgresql://usuario:password@db:5432/nombre_base_datos
 
 
 - Guarde y cierre el archivo .env.
@@ -51,14 +63,15 @@ En su aplicación, puede acceder a estas variables de entorno usando os.environ.
 
 Para ayudarle a entender mejor, aquí tiene un ejemplo de cómo debería verse un archivo .env.prueba. Esta es una versión de prueba del archivo .env con datos ficticios. No debe usar estos valores en su configuración real.
 
-POSTGRES_USER=usuario
 
-POSTGRES_PASSWORD=contrasena
-
-POSTGRES_DB=bbdd_prueba
-
-SQLALCHEMY_DATABASE_URI=postgresql://usuario:contrasenad@db:5432/bbdd_prueba
-
+    ```
+    php
+    `POSTGRES_USER= usuario
+    POSTGRES_PASSWORD= contrasena
+    POSTGRES_DB= bbdd_prueba
+    SQLALCHEMY_DATABASE_URI= postgresql://usuario:contrasenad@db:5432/bbdd_prueba`
+    ```
+    
 Tenga en cuenta que el archivo .env.prueba es solo un ejemplo. Debe crear su propio archivo .env con sus propias variables de entorno para su configuración específica.
 
 
